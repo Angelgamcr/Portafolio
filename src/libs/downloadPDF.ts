@@ -1,5 +1,8 @@
+import { Language } from "../translations";
+
 export const downloadFile = () => {
-  fetch("curriculum.pdf").then((response) => {
+  const language = localStorage.getItem('language') as Language || 'en';
+  fetch(`curriculum${language}.pdf`).then((response) => {
     console.log(response);
     response.blob().then((blob) => {
       const fileURL = window.URL.createObjectURL(blob);

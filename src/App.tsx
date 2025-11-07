@@ -165,7 +165,7 @@ function App() {
                 <button onClick={() => scrollToSection('contact')} className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-slate-800 dark:hover:bg-slate-100 transition shadow-lg hover:shadow-xl">
                   {t.hero.connectBtn}
                 </button>
-                <button className="border-2 border-slate-900 dark:border-white text-slate-900 dark:text-white px-8 py-3 rounded-lg font-semibold hover:bg-slate-900 dark:hover:bg-white hover:text-white dark:hover:text-slate-900 transition flex items-center gap-2">
+                <button onClick={downloadFile} className="border-2 border-slate-900 dark:border-white text-slate-900 dark:text-white px-8 py-3 rounded-lg font-semibold hover:bg-slate-900 dark:hover:bg-white hover:text-white dark:hover:text-slate-900 transition flex items-center gap-2">
                   <Download size={20} />
                   {t.hero.downloadBtn}
                 </button>
