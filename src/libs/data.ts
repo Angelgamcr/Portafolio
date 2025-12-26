@@ -6,7 +6,7 @@ export interface Certification {
   color: string; // Tailwind color (por ejemplo, 'blue', 'green', etc.)
 }
 
-// data.ts
+// Certificados
 export const certifications: Certification[] = [
   {
     title: "React from Zero to Expert (Hooks and MERN)",
@@ -32,4 +32,48 @@ export const certifications: Certification[] = [
     date: "Mar 2025",
     color: "slate",
   },
+];
+
+// Skills Data
+export const frontend = [
+  "React",
+  "Next.js",
+  "Angular",
+  "Redux",
+  "Tailwind",
+  "Vite",
+  "Ionic",
+];
+export const backend = [
+  "Node.js",
+  "Express",
+  "Spring Boot",
+  "Prisma",
+  "Kafka",
+  "RabbitMQ",
+];
+export const devOpsAndDB = [
+  "PostgreSQL",
+  "MongoDB",
+  "MySQL",
+  "Docker",
+  "Git",
+  "Scrum",
+];
+export const programmingLanguages = [
+  "JavaScript",
+  "TypeScript",
+  "Python",
+  "Java",
+  "C#",
+];
+export const softSkill = [
+  "teamwork",
+  "communication",
+  "proactive",
+  "problem",
+  "flexibility",
+  "responsible",
+  "cooperative",
+  "agile",
 ];
