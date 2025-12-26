@@ -24,28 +24,28 @@ export function HeroSection({ scrollToSection }: HeroSectionProps) {
               {t.hero.badge}
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-white leading-tight">
+          <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
             {t.hero.title}
           </h1>
-          <p className="text-2xl text-slate-600 dark:text-slate-300 font-medium">
+          <p className="text-2xl text-slate-300 font-medium">
             {t.hero.subtitle}
           </p>
-          <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+          <p className="text-lg text-slate-400 leading-relaxed">
             {t.hero.description}{" "}
-            <span className="font-semibold text-slate-800 dark:text-slate-200">
+            <span className="font-semibold text-slate-200">
               {t.hero.techStack}
             </span>
           </p>
           <div className="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
             <button
               onClick={() => scrollToSection("contact")}
-              className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-slate-800 dark:hover:bg-slate-100 transition shadow-lg hover:shadow-xl"
+              className="bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold hover:hover:bg-slate-100 transition shadow-lg hover:shadow-xl"
             >
               {t.hero.connectBtn}
             </button>
             <button
               onClick={downloadFile}
-              className="border-2 border-slate-900 dark:border-white text-slate-900 dark:text-white px-8 py-3 rounded-lg font-semibold hover:bg-slate-900 dark:hover:bg-white hover:text-white dark:hover:text-slate-900 transition flex items-center gap-2"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-white dark:hover:text-slate-900 transition flex items-center gap-2"
             >
               <Download size={20} />
               {t.hero.downloadBtn}
