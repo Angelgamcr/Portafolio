@@ -1,18 +1,18 @@
-import { Code2, Download } from "lucide-react";
+import { Download } from "lucide-react";
 import { useAppStore } from "@/hooks/useAppStore";
 import SectionLayout from "@/layouts/SectionLayout";
 import { downloadFile } from "@/libs/downloadPDF";
 
-interface HeroSectionProps {
+interface HomeSectionProps {
   scrollToSection: (section: string) => void;
 }
 
-export function HeroSection({ scrollToSection }: HeroSectionProps) {
+export function HomeSection({ scrollToSection }: HomeSectionProps) {
   const { t } = useAppStore();
 
   return (
     <SectionLayout
-      id="hero"
+      id="home"
       className="relative"
       backgroundUrl={"profileBackground01.jpg"}
       backgroundScrollable={true}

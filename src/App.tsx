@@ -3,15 +3,15 @@ import { downloadFile } from "./libs/downloadPDF";
 import { Header } from "./components/Header";
 import { useAppStore } from "./hooks/useAppStore";
 import { Language, Theme } from "./types/types";
-import { HeroSection } from "./common/HeroSection";
 import { AboutSection } from "./common/AboutSection";
 import { ExperienceSection } from "./common/ExperienceSection";
 import { SkillSection } from "./common/SkillSection";
 import { EducationSection } from "./common/EducationSection";
 import { ContactSection } from "./common/ContactSection";
+import { HomeSection } from "./common/HomeSection";
 
 function App() {
-  const { t, setTheme, setLanguage, setMobileMenuOpen } = useAppStore();
+  const { setTheme, setLanguage, setMobileMenuOpen } = useAppStore();
 
   useEffect(() => {
     const savedTheme = (localStorage.getItem("theme") as Theme) || "light";
@@ -39,8 +39,8 @@ function App() {
   return (
     <>
       <div className="relative min-h-dvh bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors duration-300 ">
-        {/* Hero Section */}
-        <HeroSection scrollToSection={scrollToSection} />
+        {/* Home Section */}
+        <HomeSection scrollToSection={scrollToSection} />
 
         {/* Navigation */}
         <Header scrollToSection={scrollToSection} />

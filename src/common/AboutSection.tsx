@@ -8,7 +8,7 @@ export function AboutSection() {
   return (
     <SectionLayout
       id="about"
-      className="bg-slate-200/50 dark:bg-black transition-colors duration-300"
+      className="bg-gradient-to-br from-slate-300/50 to-slate-300/30 dark:from-slate-950 dark:to-slate-900  transition-colors duration-300"
     >
       <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-8">
         {t.about.title}
