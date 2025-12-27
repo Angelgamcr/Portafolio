@@ -18,23 +18,20 @@ export function Header({ scrollToSection }: HeaderProps) {
     t,
     language,
     theme,
-    setTheme,
-    setLanguage,
+    changeTheme,
+    changeLanguage,
     mobileMenuOpen,
     setMobileMenuOpen,
   } = useAppStore();
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
+    changeTheme(newTheme);
   };
 
   const toggleLanguage = () => {
     const newLanguage = language === "en" ? "es" : "en";
-    setLanguage(newLanguage);
-    localStorage.setItem("language", newLanguage);
+    changeLanguage(newLanguage);
   };
 
   return (
@@ -51,37 +48,37 @@ export function Header({ scrollToSection }: HeaderProps) {
               onClick={() => scrollToSection("home")}
               className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
             >
-              {t.nav.home}
+              {t("nav.home")}
             </button>
             <button
               onClick={() => scrollToSection("about")}
               className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
             >
-              {t.nav.about}
+              {t("nav.about")}
             </button>
             <button
               onClick={() => scrollToSection("experience")}
               className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
             >
-              {t.nav.experience}
+              {t("nav.experience")}
             </button>
             <button
               onClick={() => scrollToSection("skills")}
               className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
             >
-              {t.nav.skills}
+              {t("nav.skills")}
             </button>
             <button
               onClick={() => scrollToSection("education")}
               className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
             >
-              {t.nav.education}
+              {t("nav.education")}
             </button>
             <button
               onClick={() => scrollToSection("contact")}
               className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
             >
-              {t.nav.contact}
+              {t("nav.contact")}
             </button>
 
             <div className="flex items-center gap-3 border-l border-slate-300 dark:border-slate-600 pl-4">
@@ -158,37 +155,37 @@ export function Header({ scrollToSection }: HeaderProps) {
             onClick={() => scrollToSection("home")}
             className="block w-full text-left text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition py-2"
           >
-            {t.nav.home}
+            {t("nav.home")}
           </button>
           <button
             onClick={() => scrollToSection("about")}
             className="block w-full text-left text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition py-2"
           >
-            {t.nav.about}
+            {t("nav.about")}
           </button>
           <button
             onClick={() => scrollToSection("experience")}
             className="block w-full text-left text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition py-2"
           >
-            {t.nav.experience}
+            {t("nav.experience")}
           </button>
           <button
             onClick={() => scrollToSection("skills")}
             className="block w-full text-left text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition py-2"
           >
-            {t.nav.skills}
+            {t("nav.skills")}
           </button>
           <button
             onClick={() => scrollToSection("education")}
             className="block w-full text-left text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition py-2"
           >
-            {t.nav.education}
+            {t("nav.education")}
           </button>
           <button
             onClick={() => scrollToSection("contact")}
             className="block w-full text-left text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition py-2"
           >
-            {t.nav.contact}
+            {t("nav.contact")}
           </button>
           <div className="flex gap-4 pt-3 border-t border-slate-200 dark:border-slate-700">
             <a

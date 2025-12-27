@@ -11,7 +11,7 @@ export function ExperienceSection() {
       className="bg-white dark:bg-slate-800/50 transition-colors duration-300"
     >
       <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-12">
-        {t.experience.title}
+        {t("experience.title")}
       </h2>
       <div className="space-y-8">
         {/* Experience 1 */}
@@ -19,14 +19,14 @@ export function ExperienceSection() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
             <div>
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-                {t.experience.role1}
+                {t("experience.role1")}
               </h3>
               <p className="text-lg text-blue-600 dark:text-blue-400 font-semibold">
-                {t.experience.company1}
+                {t("experience.company1")}
               </p>
             </div>
             <span className="text-slate-600 dark:text-slate-400 font-medium mt-2 md:mt-0">
-              {t.experience.date1}
+              {t("experience.date1")}
             </span>
           </div>
           <ul className="space-y-3 text-slate-700 dark:text-slate-300">
@@ -36,9 +36,9 @@ export function ExperienceSection() {
               </span>
               <span>
                 <span className="font-semibold">
-                  {t.experience.achievement1}
-                </span>{" "}
-                {t.experience.achievement1b}
+                  {t("experience.achievement1")}
+                </span>
+                {t("experience.achievement1b")}
               </span>
             </li>
             <li className="flex items-start gap-3">
@@ -47,9 +47,9 @@ export function ExperienceSection() {
               </span>
               <span>
                 <span className="font-semibold">
-                  {t.experience.achievement2}
+                  {t("experience.achievement2")}
                 </span>{" "}
-                {t.experience.achievement2b}
+                {t("experience.achievement2b")}
               </span>
             </li>
             <li className="flex items-start gap-3">
@@ -58,9 +58,9 @@ export function ExperienceSection() {
               </span>
               <span>
                 <span className="font-semibold">
-                  {t.experience.achievement3}
+                  {t("experience.achievement3")}
                 </span>{" "}
-                {t.experience.achievement3b}
+                {t("experience.achievement3b")}
               </span>
             </li>
             <li className="flex items-start gap-3">
@@ -69,9 +69,9 @@ export function ExperienceSection() {
               </span>
               <span>
                 <span className="font-semibold">
-                  {t.experience.achievement4}
-                </span>{" "}
-                {t.experience.achievement4b}
+                  {t("experience.achievement4")}
+                </span>
+                {t("experience.achievement4b")}
               </span>
             </li>
           </ul>
@@ -99,14 +99,14 @@ export function ExperienceSection() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
             <div>
               <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-                {t.experience.role1}
+                {t("experience.role1")}
               </h3>
               <p className="text-lg text-blue-600 dark:text-blue-400 font-semibold">
-                {t.experience.company2}
+                {t("experience.company2")}
               </p>
             </div>
             <span className="text-slate-600 dark:text-slate-400 font-medium mt-2 md:mt-0">
-              {t.experience.date2}
+              {t("experience.date2")}
             </span>
           </div>
           <ul className="space-y-3 text-slate-700 dark:text-slate-300">
@@ -116,9 +116,9 @@ export function ExperienceSection() {
               </span>
               <span>
                 <span className="font-semibold">
-                  {t.experience.achievement5}
+                  {t("experience.achievement5")}
                 </span>{" "}
-                {t.experience.achievement5b}
+                {t("experience.achievement5b")}
               </span>
             </li>
             <li className="flex items-start gap-3">
@@ -127,9 +127,9 @@ export function ExperienceSection() {
               </span>
               <span>
                 <span className="font-semibold">
-                  {t.experience.achievement6}
+                  {t("experience.achievement6")}
                 </span>{" "}
-                {t.experience.achievement6b}
+                {t("experience.achievement6b")}
               </span>
             </li>
             <li className="flex items-start gap-3">
@@ -138,9 +138,9 @@ export function ExperienceSection() {
               </span>
               <span>
                 <span className="font-semibold">
-                  {t.experience.achievement7}
+                  {t("experience.achievement7")}
                 </span>{" "}
-                {t.experience.achievement7b}
+                {t("experience.achievement7b")}
               </span>
             </li>
           </ul>

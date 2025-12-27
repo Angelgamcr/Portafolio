@@ -15,9 +15,11 @@ export function ContactSection({ downloadFile }: ContactSectionProps) {
       className="bg-gradient-to-br from-slate-900 to-slate-800 dark:from-slate-950 dark:to-slate-900 text-white"
       classNameDiv="max-w-4xl text-center"
     >
-      <h2 className="text-4xl md:text-5xl font-bold mb-6">{t.contact.title}</h2>
+      <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        {t("contact.title")}
+      </h2>
       <p className="text-xl text-slate-300 dark:text-slate-400 mb-12">
-        {t.contact.subtitle}
+        {t("contact.subtitle")}
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -28,7 +30,7 @@ export function ContactSection({ downloadFile }: ContactSectionProps) {
           className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
         >
           <Linkedin size={20} />
-          {t.contact.linkedin}
+          {t("contact.linkedin")}
         </a>
         <a
           href="https://github.com/angelgamcr"
@@ -37,14 +39,14 @@ export function ContactSection({ downloadFile }: ContactSectionProps) {
           className="bg-white hover:bg-slate-100 text-slate-900 px-8 py-4 rounded-lg font-semibold transition shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
         >
           <Github size={20} />
-          {t.contact.github}
+          {t("contact.github")}
         </a>
         <button
           onClick={downloadFile}
           className="border-2 border-white hover:bg-white hover:text-slate-900 text-white px-8 py-4 rounded-lg font-semibold transition flex items-center justify-center gap-2"
         >
           <Download size={20} />
-          {t.contact.download}
+          {t("contact.download")}
         </button>
       </div>
 
@@ -79,7 +81,7 @@ export function ContactSection({ downloadFile }: ContactSectionProps) {
           <span>Costa Rica</span>
         </div>
         <p className="text-slate-400 dark:text-slate-500 text-sm">
-          {t.contact.builtWith}
+          {t("contact.builtWith")}
         </p>
       </div>
     </SectionLayout>

@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Open to New Opportunities",
+    "title": "Full-Stack Software Engineer",
+    "subtitle": "Specialized in Scalable MVPs & Microservices Architectures",
+    "description": "5+ years transforming ideas into high-performance digital products with ",
+    "techStack": "React, Node.js, and TypeScript",
+    "connectBtn": "Let's Connect",
+    "downloadBtn": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "intro1": "Full-Stack Software Engineer with over",
+    "years": "5 years",
+    "intro2": "designing and developing scalable digital solutions that drive business growth.",
+    "intro3": "My specialization focuses on building production-ready applications that combine robust architecture with exceptional user experience.",
+    "microservices": "Scalable Microservices",
+    "microservicesDesc": "Robust architectures that scale with your business",
+    "interfaces": "High-Performance Interfaces",
+    "interfacesDesc": "Responsive web interfaces that enhance user experience",
+    "mvp": "Agile MVP Development",
+    "mvpDesc": "Production-ready SaaS MVPs with rapid iteration"
+  },
+  "experience": {
+    "title": "Featured Experience",
+    "role1": "Full-Stack Web Developer",
+    "company1": "Technologie People Connection",
+    "date1": "Dec 2022 - Mar 2024",
+    "achievement1": "Designed and implemented a scalable microservices architecture",
+    "achievement1b": "that supports exponential platform growth",
+    "achievement2": "Developed a SaaS MVP from scratch",
+    "achievement2b": "with multi-tenant architecture, focused on usability and performance",
+    "achievement3": "Created intuitive and fully responsive interfaces",
+    "achievement3b": "adaptable to mobile, tablet, and desktop devices",
+    "achievement4": "Led performance optimization initiatives",
+    "achievement4b": "reducing load times and improving overall user experience",
+    "company2": "Comunidad de Aplicaciones Móviles",
+    "date2": "Feb 2018 - Jul 2022",
+    "achievement5": "Developed and adapted enterprise web applications",
+    "achievement5b": "using Angular, NodeJS, and SQL Server",
+    "achievement6": "Implemented robust solutions in production environments",
+    "achievement6b": "with Tomcat server and relational databases",
+    "achievement7": "Collaborated in multidisciplinary teams",
+    "achievement7b": "applying agile methodologies for iterative deliveries"
+  },
+  "skills": {
+    "title": "Tech Stack & Skills",
+    "frontend": "Frontend Development",
+    "backend": "Backend Development",
+    "database": "Databases & DevOps",
+    "languages": "Programming Languages",
+    "soft": "Soft Skills",
+    "teamwork": "Teamwork",
+    "communication": "Assertive Communication",
+    "proactive": "Proactive",
+    "problem": "Problem Solving",
+    "flexibility": "Flexibility",
+    "responsible": "Responsible",
+    "cooperative": "Cooperative",
+    "agile": "Agile Methodologies"
+  },
+  "education": {
+    "title": "Education & Certifications",
+    "educationTitle": "Education",
+    "degree": "Bachelor's Degree in Software Engineering",
+    "university": "Instituto Tecnológico de Costa Rica",
+    "graduated": "Graduated: March 2024",
+    "description": "Strong foundations in software development, architecture, and engineering best practices",
+    "certifications": "Certifications"
+  },
+  "contact": {
+    "title": "Ready to Build Your Next Successful Project?",
+    "subtitle": "Let's collaborate to transform your vision into a scalable, high-impact digital solution",
+    "linkedin": "Connect on LinkedIn",
+    "github": "View GitHub",
+    "download": "Download CV",
+    "builtWith": "Built with React + TypeScript + Tailwind CSS"
+  }
+}

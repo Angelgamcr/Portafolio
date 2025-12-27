@@ -21,19 +21,19 @@ export function HomeSection({ scrollToSection }: HomeSectionProps) {
         <div className="flex-1 space-y-6">
           <div className="inline-block">
             <span className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full text-sm font-semibold">
-              {t.hero.badge}
+              {t("hero.badge")}
             </span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
-            {t.hero.title}
+            {t("hero.title")}
           </h1>
           <p className="text-2xl text-slate-300 font-medium">
-            {t.hero.subtitle}
+            {t("hero.subtitle")}
           </p>
           <p className="text-lg text-slate-400 leading-relaxed">
-            {t.hero.description}{" "}
+            {t("hero.description")}
             <span className="font-semibold text-slate-200">
-              {t.hero.techStack}
+              {t("hero.techStack")}
             </span>
           </p>
           <div className="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
@@ -41,14 +41,14 @@ export function HomeSection({ scrollToSection }: HomeSectionProps) {
               onClick={() => scrollToSection("contact")}
               className="bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold hover:hover:bg-slate-100 transition shadow-lg hover:shadow-xl"
             >
-              {t.hero.connectBtn}
+              {t("hero.connectBtn")}
             </button>
             <button
               onClick={downloadFile}
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-white dark:hover:text-slate-900 transition flex items-center gap-2"
             >
               <Download size={20} />
-              {t.hero.downloadBtn}
+              {t("hero.downloadBtn")}
             </button>
           </div>
         </div>

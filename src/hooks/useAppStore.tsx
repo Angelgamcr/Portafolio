@@ -1,13 +1,20 @@
-import { createContext, useContext, useState } from "react";
-import { translations } from "@/translations";
+import { createContext, useContext, useEffect, useState } from "react";
 import { Language, Theme } from "@/types/types";
+import es from "@/libs/i18n/es.json";
+import en from "@/libs/i18n/en.json";
+
+const translations: Record<string, any> = {
+  es,
+  en,
+  // fr,
+};
 
 type AppContextType = {
   t: any;
   theme: Theme;
-  setTheme: (theme: Theme) => void;
+  changeTheme: (theme: Theme) => void;
   language: Language;
-  setLanguage: (lang: Language) => void;
+  changeLanguage: (lang: Language) => void;
   mobileMenuOpen: boolean;
   setMobileMenuOpen: (isMobile: boolean) => void;
 };
@@ -27,21 +34,66 @@ export const useAppStore = () => {
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [theme, setTheme] = useState<Theme>("light");
-  const [language, setLanguage] = useState<Language>("en");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  /**************** theme ******************/
+  const [theme, setTheme] = useState<Theme>(
+    (localStorage.getItem("theme") as Theme) || "light"
+  );
+  /**************** i18n ******************/
+  const [language, setLanguage] = useState<Language>(
+    (localStorage.getItem("locale") as Language) || "en"
+  );
 
-  const t = translations[language];
+  // Cuando renderiza, los obtiene localmente
+  useEffect(() => {
+    const savedTheme = (localStorage.getItem("theme") as Theme) || "light";
+    const savedLanguage = (localStorage.getItem("locale") as Language) || "en";
+    changeTheme(savedTheme);
+    changeLanguage(savedLanguage);
+    document.documentElement.classList.toggle("dark", savedTheme === "dark");
+  }, []);
+
+  /**************** theme ******************/
+  // Cambia el tema de la app
+  function changeTheme(theme: Theme) {
+    localStorage.setItem("theme", theme);
+    setTheme(theme);
+    document.documentElement.classList.toggle("dark", theme === "dark");
+  }
+  /**************** theme ******************/
+  /**************** i18n ******************/
+  // Cambia el idioma de la app
+  function changeLanguage(lang: Language) {
+    localStorage.setItem("locale", lang);
+    setLanguage(lang);
+  }
+  // Obtiene traduccion por clave
+  function t(key: string): string {
+    const dictionary = translations[language];
+    if (!dictionary) {
+      console.warn(`Language "${language}" not found`);
+      return key;
+    }
+    // Si no tiene puntos → acceso directo
+    if (!key.includes(".")) {
+      return dictionary[key] ?? key;
+    }
+    // Acceso profundo por puntos
+    const value = key.split(".").reduce((acc, part) => acc?.[part], dictionary);
+    return typeof value === "string" ? value : key;
+  }
+  /**************** i18n ******************/
+
   return (
     <AppContext.Provider
       value={{
-        t,
         theme,
-        language,
-        setTheme,
-        setLanguage,
+        changeTheme,
         mobileMenuOpen,
         setMobileMenuOpen,
+        language,
+        changeLanguage,
+        t,
       }}
     >
       {children}

@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "education": "Educación",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "badge": "Abierto a Nuevas Oportunidades",
+    "title": "Ingeniero de Software Full-Stack",
+    "subtitle": "Especializado en MVPs Escalables y Arquitecturas de Microservicios",
+    "description": "5+ años transformando ideas en productos digitales de alto rendimiento con",
+    "techStack": "React, Node.js y TypeScript",
+    "connectBtn": "Conectemos",
+    "downloadBtn": "Descargar CV"
+  },
+  "about": {
+    "title": "Acerca de Mí",
+    "intro1": "Ingeniero de Software Full-Stack con más de",
+    "years": "5 años",
+    "intro2": "diseñando y desarrollando soluciones digitales escalables que impulsan el crecimiento empresarial.",
+    "intro3": "Mi especialización se centra en construir aplicaciones listas para producción que combinan arquitectura robusta con experiencia de usuario excepcional.",
+    "microservices": "Microservicios Escalables",
+    "microservicesDesc": "Arquitecturas robustas que escalan con tu negocio",
+    "interfaces": "Interfaces de Alto Rendimiento",
+    "interfacesDesc": "Interfaces web responsivas que mejoran la experiencia del usuario",
+    "mvp": "Desarrollo Ágil de MVP",
+    "mvpDesc": "MVPs SaaS listos para producción con iteración rápida"
+  },
+  "experience": {
+    "title": "Experiencia Destacada",
+    "role1": "Desarrollador Web Full-Stack",
+    "company1": "Technologie People Connection",
+    "date1": "Dic 2022 - Mar 2024",
+    "achievement1": "Diseñé e implementé una arquitectura de microservicios escalable",
+    "achievement1b": "que soporta el crecimiento exponencial de la plataforma",
+    "achievement2": "Desarrollé un MVP SaaS desde cero",
+    "achievement2b": "con arquitectura multi-tenant, enfocado en usabilidad y rendimiento",
+    "achievement3": "Creé interfaces intuitivas y totalmente responsivas",
+    "achievement3b": "adaptables a dispositivos móviles, tablets y desktop",
+    "achievement4": "Lideré iniciativas de optimización de rendimiento",
+    "achievement4b": "reduciendo tiempos de carga y mejorando la experiencia general",
+    "company2": "Comunidad de Aplicaciones Móviles",
+    "date2": "Feb 2018 - Jul 2022",
+    "achievement5": "Desarrollé y adapté aplicaciones web empresariales",
+    "achievement5b": "utilizando Angular, NodeJS y SQL Server",
+    "achievement6": "Implementé soluciones robustas en entornos de producción",
+    "achievement6b": "con servidor Tomcat y bases de datos relacionales",
+    "achievement7": "Colaboré en equipos multidisciplinarios",
+    "achievement7b": "aplicando metodologías ágiles para entregas iterativas"
+  },
+  "skills": {
+    "title": "Stack Tecnológico y Habilidades",
+    "frontend": "Desarrollo Frontend",
+    "backend": "Desarrollo Backend",
+    "database": "Bases de Datos y DevOps",
+    "languages": "Lenguajes de Programación",
+    "soft": "Habilidades Blandas",
+    "teamwork": "Trabajo en Equipo",
+    "communication": "Comunicación Asertiva",
+    "proactive": "Proactivo",
+    "problem": "Resolución de Problemas",
+    "flexibility": "Flexibilidad",
+    "responsible": "Responsable",
+    "cooperative": "Cooperativo",
+    "agile": "Metodologías Ágiles"
+  },
+  "education": {
+    "title": "Educación y Certificaciones",
+    "educationTitle": "Educación",
+    "degree": "Licenciatura en Ingeniería de Software",
+    "university": "Instituto Tecnológico de Costa Rica",
+    "graduated": "Graduado: Marzo 2024",
+    "description": "Fundamentos sólidos en desarrollo de software, arquitectura y mejores prácticas de ingeniería",
+    "certifications": "Certificaciones"
+  },
+  "contact": {
+    "title": "¿Listo para Construir tu Próximo Proyecto Exitoso?",
+    "subtitle": "Colaboremos para transformar tu visión en una solución digital escalable y de alto impacto",
+    "linkedin": "Conectar en LinkedIn",
+    "github": "Ver GitHub",
+    "download": "Descargar CV",
+    "builtWith": "Construido con React + TypeScript + Tailwind CSS"
+  }
+}

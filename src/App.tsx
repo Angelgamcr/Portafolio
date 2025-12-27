@@ -11,16 +11,7 @@ import { ContactSection } from "./common/ContactSection";
 import { HomeSection } from "./common/HomeSection";
 
 function App() {
-  const { setTheme, setLanguage, setMobileMenuOpen } = useAppStore();
-
-  useEffect(() => {
-    const savedTheme = (localStorage.getItem("theme") as Theme) || "light";
-    const savedLanguage =
-      (localStorage.getItem("language") as Language) || "en";
-    setTheme(savedTheme);
-    setLanguage(savedLanguage);
-    document.documentElement.classList.toggle("dark", savedTheme === "dark");
-  }, []);
+  const { changeTheme, changeLanguage, setMobileMenuOpen } = useAppStore();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);

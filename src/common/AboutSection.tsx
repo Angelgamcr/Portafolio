@@ -11,19 +11,19 @@ export function AboutSection() {
       className="bg-gradient-to-br from-slate-300/50 to-slate-300/30 dark:from-slate-950 dark:to-slate-900  transition-colors duration-300"
     >
       <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-8">
-        {t.about.title}
+        {t("about.title")}
       </h2>
       <div className="grid md:grid-cols-2 gap-12">
         <div className="space-y-6">
           <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-            {t.about.intro1}{" "}
+            {t("about.intro1")}
             <span className="font-semibold text-slate-900 dark:text-white">
-              {t.about.years}
-            </span>{" "}
-            {t.about.intro2}
+              {t("about.years")}
+            </span>
+            {t("about.intro2")}
           </p>
           <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-            {t.about.intro3}
+            {t("about.intro3")}
           </p>
         </div>
         <div className="space-y-4">
@@ -34,10 +34,10 @@ export function AboutSection() {
             />
             <div>
               <h3 className="font-semibold text-slate-900 dark:text-white mb-1">
-                {t.about.microservices}
+                {t("about.microservices")}
               </h3>
               <p className="text-slate-600 dark:text-slate-400">
-                {t.about.microservicesDesc}
+                {t("about.microservicesDesc")}
               </p>
             </div>
           </div>
@@ -48,10 +48,10 @@ export function AboutSection() {
             />
             <div>
               <h3 className="font-semibold text-slate-900 dark:text-white mb-1">
-                {t.about.interfaces}
+                {t("about.interfaces")}
               </h3>
               <p className="text-slate-600 dark:text-slate-400">
-                {t.about.interfacesDesc}
+                {t("about.interfacesDesc")}
               </p>
             </div>
           </div>
@@ -62,10 +62,10 @@ export function AboutSection() {
             />
             <div>
               <h3 className="font-semibold text-slate-900 dark:text-white mb-1">
-                {t.about.mvp}
+                {t("about.mvp")}
               </h3>
               <p className="text-slate-600 dark:text-slate-400">
-                {t.about.mvpDesc}
+                {t("about.mvpDesc")}
               </p>
             </div>
           </div>

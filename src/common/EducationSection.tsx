@@ -8,7 +8,7 @@ export function EducationSection() {
   return (
     <SectionLayout id="education">
       <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-12">
-        {t.education.title}
+        {t("education.title")}
       </h2>
       <div className="grid md:grid-cols-2 gap-8">
         {/* Education */}
@@ -29,21 +29,21 @@ export function EducationSection() {
               </svg>
             </div>
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-              {t.education.educationTitle}
+              {t("education.educationTitle")}
             </h3>
           </div>
           <div className="space-y-2">
             <h4 className="text-xl font-bold text-slate-900 dark:text-white">
-              {t.education.degree}
+              {t("education.degree")}
             </h4>
             <p className="text-lg text-blue-600 dark:text-blue-400 font-semibold">
-              {t.education.university}
+              {t("education.university")}
             </p>
             <p className="text-slate-600 dark:text-slate-400">
-              {t.education.graduated}
+              {t("education.graduated")}
             </p>
             <p className="text-slate-700 dark:text-slate-300 mt-4 leading-relaxed">
-              {t.education.description}
+              {t("education.description")}
             </p>
           </div>
         </div>
@@ -65,7 +65,7 @@ export function EducationSection() {
               </svg>
             </div>
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-              {t.education.certifications}
+              {t("education.certifications")}
             </h3>
           </div>
           <div className="space-y-4">
