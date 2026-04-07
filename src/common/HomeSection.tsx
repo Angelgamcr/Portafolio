@@ -45,7 +45,7 @@ export function HomeSection({ scrollToSection }: HomeSectionProps) {
             </button>
             <button
               onClick={downloadFile}
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-white dark:hover:text-slate-900 transition flex items-center gap-2"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white dark:hover:text-slate-900 transition flex items-center gap-2"
             >
               <Download size={20} />
               {t("hero.downloadBtn")}
