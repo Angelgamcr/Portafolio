@@ -58,7 +58,14 @@ export function HomeSection({ scrollToSection }: HomeSectionProps) {
           </div>
         </div> */}
         <div className="flex-1 flex justify-center">
-          <img src="logo.png" width={256} height={256} />
+          <div className="inline-block rounded-full overflow-hidden w-[256px] h-[256px] border-4 border-slate-200 border-slate-700 shadow-inner">
+            <img 
+              src="profile.png" 
+              width={256} 
+              height={256} 
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
       </div>
     </SectionLayout>
