@@ -72,9 +72,9 @@ export function EducationSection() {
             {certifications.map((cert) => (
               <div
                 key={cert.title}
-                className={`border-l-4 border-${cert.color}-500 dark:border-${cert.color}-400 pl-4`}
+                className={`border-l-4 ${cert.color} pl-4 group relative transition-all duration-300 ease-in-out hover:translate-x-1`}
               >
-                <h4 className="font-bold text-slate-900 dark:text-white">
+                <h4 className={`font-bold text-slate-900 dark:text-white transition-colors duration-300 ${cert.text}`}>
                   {cert.title}
                 </h4>
                 <p className="text-sm text-slate-600 dark:text-slate-400">
