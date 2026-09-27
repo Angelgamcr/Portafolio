@@ -36,7 +36,7 @@ export function ContactSection({ downloadFile }: ContactSectionProps) {
           href="https://github.com/angelgamcr"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white hover:bg-slate-100 text-slate-900 px-8 py-4 rounded-lg font-semibold transition shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+          className="bg-white hover:bg-slate-200 text-slate-900  px-8 py-4 rounded-lg font-semibold transition shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
         >
           <Github size={20} />
           {t("contact.github")}

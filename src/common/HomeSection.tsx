@@ -39,13 +39,13 @@ export function HomeSection({ scrollToSection }: HomeSectionProps) {
           <div className="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
             <button
               onClick={() => scrollToSection("contact")}
-              className="bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold hover:hover:bg-slate-100 transition shadow-lg hover:shadow-xl"
+              className="bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-slate-200 transition shadow-lg hover:shadow-xl"
             >
               {t("hero.connectBtn")}
             </button>
             <button
               onClick={downloadFile}
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white dark:hover:text-slate-900 transition flex items-center gap-2"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 dark:hover:text-slate-900 transition flex items-center gap-2"
             >
               <Download size={20} />
               {t("hero.downloadBtn")}
