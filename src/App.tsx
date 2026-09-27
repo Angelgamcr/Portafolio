@@ -9,7 +9,7 @@ import { ContactSection } from "./common/ContactSection";
 import { HomeSection } from "./common/HomeSection";
 
 function App() {
-  const { changeTheme, changeLanguage, setMobileMenuOpen, scrollToSection } = useAppStore();
+  const { changeTheme, changeLanguage, setMobileMenuOpen } = useAppStore();
 
 
 
@@ -17,10 +17,10 @@ function App() {
     <>
       <div className="relative min-h-dvh bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 transition-colors duration-300 ">
         {/* Home Section */}
-        <HomeSection scrollToSection={scrollToSection} />
+        <HomeSection />
 
         {/* Navigation */}
-        <Header scrollToSection={scrollToSection} />
+        <Header />
 
         {/* About Section */}
         <AboutSection />

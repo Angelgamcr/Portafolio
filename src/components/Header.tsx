@@ -9,11 +9,10 @@ import {
   X,
 } from "lucide-react";
 import { useAppStore } from "@/hooks/useAppStore";
+import { useActiveSection } from "@/hooks/useActiveSection";
 
-interface HeaderProps {
-  scrollToSection: (section: string) => void;
-}
-export function Header({ scrollToSection }: HeaderProps) {
+
+export function Header() {
   const {
     t,
     language,
@@ -23,7 +22,7 @@ export function Header({ scrollToSection }: HeaderProps) {
     mobileMenuOpen,
     setMobileMenuOpen,
   } = useAppStore();
-
+  const { activeId, scrollToSection, SECTION_IDS } = useActiveSection();
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     changeTheme(newTheme);
@@ -44,42 +43,17 @@ export function Header({ scrollToSection }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
-            <button
-              onClick={() => scrollToSection("home")}
-              className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
-            >
-              {t("nav.home")}
-            </button>
-            <button
-              onClick={() => scrollToSection("about")}
-              className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
-            >
-              {t("nav.about")}
-            </button>
-            <button
-              onClick={() => scrollToSection("experience")}
-              className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
-            >
-              {t("nav.experience")}
-            </button>
-            <button
-              onClick={() => scrollToSection("skills")}
-              className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
-            >
-              {t("nav.skills")}
-            </button>
-            <button
-              onClick={() => scrollToSection("education")}
-              className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
-            >
-              {t("nav.education")}
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
-            >
-              {t("nav.contact")}
-            </button>
+            {
+              SECTION_IDS.map((name) =>
+                <button
+                  key={'section-id-' + name}
+                  onClick={() => scrollToSection(name)}
+                  className={`hover:text-blue-600 dark:hover:text-blue-400 transition ${activeId === name ? 'text-blue-600 dark:text-blue-400' : 'text-slate-600 dark:text-slate-300'}`}
+                >
+                  {t(`nav.${name}`)}
+                </button>
+              )
+            }
 
             <div className="flex items-center gap-3 border-l border-slate-300 dark:border-slate-600 pl-4">
               <button
@@ -145,48 +119,21 @@ export function Header({ scrollToSection }: HeaderProps) {
 
         <div
           className={`md:hidden space-y-3 border-t border-slate-200 dark:border-slate-700  
-            overflow-hidden transition-all duration-500 ease-in-out ${
-              mobileMenuOpen
-                ? "max-h-96 opacity-100 mt-4 pt-4 pb-4"
-                : "max-h-0 opacity-0"
+            overflow-hidden transition-all duration-500 ease-in-out ${mobileMenuOpen
+              ? "max-h-96 opacity-100 mt-4 pt-4 pb-4"
+              : "max-h-0 opacity-0"
             }`}
         >
-          <button
-            onClick={() => scrollToSection("home")}
-            className="block w-full text-left text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition py-2"
-          >
-            {t("nav.home")}
-          </button>
-          <button
-            onClick={() => scrollToSection("about")}
-            className="block w-full text-left text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition py-2"
-          >
-            {t("nav.about")}
-          </button>
-          <button
-            onClick={() => scrollToSection("experience")}
-            className="block w-full text-left text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition py-2"
-          >
-            {t("nav.experience")}
-          </button>
-          <button
-            onClick={() => scrollToSection("skills")}
-            className="block w-full text-left text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition py-2"
-          >
-            {t("nav.skills")}
-          </button>
-          <button
-            onClick={() => scrollToSection("education")}
-            className="block w-full text-left text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition py-2"
-          >
-            {t("nav.education")}
-          </button>
-          <button
-            onClick={() => scrollToSection("contact")}
-            className="block w-full text-left text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition py-2"
-          >
-            {t("nav.contact")}
-          </button>
+          {
+            SECTION_IDS.map((name) =>
+              <button
+                onClick={() => scrollToSection(name)}
+                className={`block w-full text-left hover:text-blue-600 dark:hover:text-blue-400 transition py-2${activeId === name ? 'text-blue-600 dark:text-blue-400' : 'text-slate-600 dark:text-slate-300'}`}
+              >
+                {t(`nav.${name}`)}
+              </button>
+            )
+          }
           <div className="flex gap-4 pt-3 border-t border-slate-200 dark:border-slate-700">
             <a
               href="https://linkedin.com/in/angelgamcr"

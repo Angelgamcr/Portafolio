@@ -2,13 +2,13 @@ import { Download } from "lucide-react";
 import { useAppStore } from "@/hooks/useAppStore";
 import SectionLayout from "@/components/SectionLayout";
 import { downloadFile } from "@/libs/downloadPDF";
+import { useActiveSection } from "@/hooks/useActiveSection";
 
-interface HomeSectionProps {
-  scrollToSection: (section: string) => void;
-}
 
-export function HomeSection({ scrollToSection }: HomeSectionProps) {
+
+export function HomeSection() {
   const { t } = useAppStore();
+  const { scrollToSection } = useActiveSection();
 
   return (
     <SectionLayout
