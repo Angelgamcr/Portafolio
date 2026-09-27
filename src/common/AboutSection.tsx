@@ -1,6 +1,6 @@
 import { Rocket, Users, Zap } from "lucide-react";
 import { useAppStore } from "@/hooks/useAppStore";
-import SectionLayout from "@/layouts/SectionLayout";
+import SectionLayout from "@/components/SectionLayout";
 
 export function AboutSection() {
   const { t } = useAppStore();
@@ -27,7 +27,7 @@ export function AboutSection() {
           </p>
         </div>
         <div className="space-y-4">
-          <div className="flex items-start gap-4 p-4 bg-slate-50 dark:bg-slate-700/50 rounded-lg">
+          <div className="flex items-start gap-4 p-4 bg-slate-50 dark:bg-slate-700/50 rounded-lg transition hover:scale-105">
             <Rocket
               className="text-blue-600 dark:text-blue-400 flex-shrink-0"
               size={24}
@@ -41,7 +41,7 @@ export function AboutSection() {
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-4 p-4 bg-slate-50 dark:bg-slate-700/50 rounded-lg">
+          <div className="flex items-start gap-4 p-4 bg-slate-50 dark:bg-slate-700/50 rounded-lg transition hover:scale-105">
             <Zap
               className="text-yellow-600 dark:text-yellow-400 flex-shrink-0"
               size={24}
@@ -55,7 +55,7 @@ export function AboutSection() {
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-4 p-4 bg-slate-50 dark:bg-slate-700/50 rounded-lg">
+          <div className="flex items-start gap-4 p-4 bg-slate-50 dark:bg-slate-700/50 rounded-lg transition hover:scale-105">
             <Users
               className="text-green-600 dark:text-green-400 flex-shrink-0"
               size={24}

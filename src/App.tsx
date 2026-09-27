@@ -1,31 +1,17 @@
-import { useEffect } from "react";
 import { downloadFile } from "./libs/downloadPDF";
 import { Header } from "./components/Header";
 import { useAppStore } from "./hooks/useAppStore";
-import { Language, Theme } from "./types/types";
 import { AboutSection } from "./common/AboutSection";
-import { ExperienceSection } from "./common/ExperienceSection";
-import { SkillSection } from "./common/SkillSection";
+import { ExperienceSection } from "./common/Experience/ExperienceSection";
+import { SkillSection } from "./common/Skill/SkillSection";
 import { EducationSection } from "./common/EducationSection";
 import { ContactSection } from "./common/ContactSection";
 import { HomeSection } from "./common/HomeSection";
 
 function App() {
-  const { changeTheme, changeLanguage, setMobileMenuOpen } = useAppStore();
+  const { changeTheme, changeLanguage, setMobileMenuOpen, scrollToSection } = useAppStore();
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 60;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-      setMobileMenuOpen(false);
-    }
-  };
+
 
   return (
     <>

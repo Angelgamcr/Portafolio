@@ -1,7 +1,7 @@
-import { Language } from "../translations";
+import { Language } from "@/types/types";
 
 export const downloadFile = () => {
-  const language = localStorage.getItem('language') as Language || 'en';
+  const language = localStorage.getItem('locale') as Language || 'en';
   fetch(`curriculum${language}.pdf`).then((response) => {
     console.log(response);
     response.blob().then((blob) => {
