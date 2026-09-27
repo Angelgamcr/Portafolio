@@ -1,6 +1,6 @@
 import { Download } from "lucide-react";
 import { useAppStore } from "@/hooks/useAppStore";
-import SectionLayout from "@/layouts/SectionLayout";
+import SectionLayout from "@/components/SectionLayout";
 import { downloadFile } from "@/libs/downloadPDF";
 
 interface HomeSectionProps {

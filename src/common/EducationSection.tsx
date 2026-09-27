@@ -1,4 +1,4 @@
-import SectionLayout from "@/layouts/SectionLayout";
+import SectionLayout from "@/components/SectionLayout";
 import { useAppStore } from "@/hooks/useAppStore";
 import { certifications } from "@/libs/data";
 

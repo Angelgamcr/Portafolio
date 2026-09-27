@@ -17,6 +17,7 @@ type AppContextType = {
   changeLanguage: (lang: Language) => void;
   mobileMenuOpen: boolean;
   setMobileMenuOpen: (isMobile: boolean) => void;
+  scrollToSection:(id:string)=>void;
 };
 
 // Context: Es usado para poder enviar las variables a los componentes hijos
@@ -83,6 +84,21 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({
     return typeof value === "string" ? value : key;
   }
   /**************** i18n ******************/
+  /**************** ScrollSection ******************/
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            const offset = 60;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+            });
+            setMobileMenuOpen(false);
+        }
+    };
+  /**************** ScrollSection ******************/
 
   return (
     <AppContext.Provider
@@ -94,6 +110,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({
         language,
         changeLanguage,
         t,
+        scrollToSection
       }}
     >
       {children}

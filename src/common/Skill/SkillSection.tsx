@@ -1,9 +1,8 @@
 import { useAppStore } from "@/hooks/useAppStore";
-import SectionLayout from "@/layouts/SectionLayout";
-import {
-  skills,
-} from "@/libs/data";
+import SectionLayout from "@/components/SectionLayout";
+
 import { SkillCard } from "./SkillCard";
+import { SKILLS } from "../../mocks/skills.mock";
 
 export function SkillSection() {
   const { t } = useAppStore();
@@ -21,13 +20,12 @@ export function SkillSection() {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
 
-       {
-          skills.map(skill =>
+        {
+          SKILLS.map((skill, index) =>
             <SkillCard
-              title={skill.title}
-              color={skill.color}
+              key={'skill' + index}
+              {...skill}
               icon={<skill.icon.element className={skill.icon.color} size={24} />}
-              skills={skill.skills}
             />
           )
         }

@@ -9,21 +9,9 @@ import { ContactSection } from "./common/ContactSection";
 import { HomeSection } from "./common/HomeSection";
 
 function App() {
-  const { changeTheme, changeLanguage, setMobileMenuOpen } = useAppStore();
+  const { changeTheme, changeLanguage, setMobileMenuOpen, scrollToSection } = useAppStore();
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 60;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-      setMobileMenuOpen(false);
-    }
-  };
+
 
   return (
     <>
