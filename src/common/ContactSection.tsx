@@ -1,6 +1,7 @@
 import { Download, Github, Linkedin, Mail } from "lucide-react";
 import { useAppStore } from "@/hooks/useAppStore";
 import SectionLayout from "@/components/SectionLayout";
+import { Button, ButtonColor } from "@/components/Button";
 
 interface ContactSectionProps {
   downloadFile: () => void;
@@ -23,31 +24,36 @@ export function ContactSection({ downloadFile }: ContactSectionProps) {
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-        <a
+
+        {/* Boton de Github */}
+        <Button
+          color={ButtonColor.BLUE}
+          tag={'a'}
           href="https://linkedin.com/in/angelgamcr"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
         >
           <Linkedin size={20} />
           {t("contact.linkedin")}
-        </a>
-        <a
+        </Button>
+
+        {/* Boton de Github */}
+        <Button
+          color={ButtonColor.LIGHT}
+          tag={'a'}
           href="https://github.com/angelgamcr"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-white hover:bg-slate-200 text-slate-900  px-8 py-4 rounded-lg font-semibold transition shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
         >
           <Github size={20} />
           {t("contact.github")}
-        </a>
-        <button
+        </Button>
+      
+        {/* Boton de descargar CV */}
+        <Button
           onClick={downloadFile}
-          className="border-2 border-white hover:bg-white hover:text-slate-900 text-white px-8 py-4 rounded-lg font-semibold transition flex items-center justify-center gap-2"
+          color={ButtonColor.TRANSPARENT}
         >
           <Download size={20} />
           {t("contact.download")}
-        </button>
+        </Button>
+
       </div>
 
       <div className="border-t border-slate-700 dark:border-slate-800 pt-8 space-y-4">
