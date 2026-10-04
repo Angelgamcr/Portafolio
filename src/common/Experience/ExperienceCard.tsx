@@ -33,7 +33,7 @@ export const ExperienceCard = ({ company, role, date, tasks, technologies }: Exp
             </span>
             <span>
               <span className="font-semibold">
-                {t(task.label1)}
+                {t(task.label1)}&nbsp;
               </span>
               {t(task.label2)}
             </span>

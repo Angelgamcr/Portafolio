@@ -3,6 +3,7 @@ import { useAppStore } from "@/hooks/useAppStore";
 import SectionLayout from "@/components/SectionLayout";
 import { downloadFile } from "@/libs/downloadPDF";
 import { useActiveSection } from "@/hooks/useActiveSection";
+import { Button, ButtonColor } from "@/components/Button";
 
 
 
@@ -37,19 +38,24 @@ export function HomeSection() {
             </span>
           </p>
           <div className="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
-            <button
+
+            {/* BOTON DE IR A CONTACTO */}
+            <Button
               onClick={() => scrollToSection("contact")}
-              className="bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-slate-200 transition shadow-lg hover:shadow-xl"
+              color={ButtonColor.LIGHT}
             >
               {t("hero.connectBtn")}
-            </button>
-            <button
+            </Button>
+           
+            {/* BOTON DE DESCARGAR CV */}
+             <Button
               onClick={downloadFile}
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 dark:hover:text-slate-900 transition flex items-center gap-2"
+              color={ButtonColor.TRANSPARENT}
             >
-              <Download size={20} />
+             <Download size={20} />
               {t("hero.downloadBtn")}
-            </button>
+            </Button>
+
           </div>
         </div>
         {/* <div className="flex-1 flex justify-center">

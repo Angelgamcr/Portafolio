@@ -1,6 +1,5 @@
 import { downloadFile } from "./libs/downloadPDF";
 import { Header } from "./components/Header";
-import { useAppStore } from "./hooks/useAppStore";
 import { AboutSection } from "./common/AboutSection";
 import { ExperienceSection } from "./common/Experience/ExperienceSection";
 import { SkillSection } from "./common/Skill/SkillSection";
@@ -9,7 +8,6 @@ import { ContactSection } from "./common/ContactSection";
 import { HomeSection } from "./common/HomeSection";
 
 function App() {
-  const { changeTheme, changeLanguage, setMobileMenuOpen } = useAppStore();
 
 
 
