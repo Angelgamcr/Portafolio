@@ -10,13 +10,13 @@ const frontend = {
     color: "text-blue-600 dark:text-blue-40"
   },
   skills: [
-   "React",
-  "Next.js",
-  "Angular",
-  "Redux",
-  "Tailwind",
-  "Vite",
-  "Ionic",
+    "React",
+    "Next.js",
+    "Angular",
+    "Redux",
+    "Tailwind",
+    "Vite",
+    "Ionic",
   ]
 };
 const backend = {
@@ -28,11 +28,11 @@ const backend = {
   },
   skills: [
     "Node.js",
-  "Express",
-  "Spring Boot",
-  "Prisma",
-  "Kafka",
-  "RabbitMQ",
+    "Express",
+    "Spring Boot",
+    "Prisma",
+    "Kafka",
+    "RabbitMQ",
   ]
 };
 const devOpsAndDB = {
@@ -43,12 +43,12 @@ const devOpsAndDB = {
     color: "text-orange-600 dark:text-orange-400"
   },
   skills: [
-     "PostgreSQL",
-  "MongoDB",
-  "MySQL",
-  "Docker",
-  "Git",
-  "Scrum",
+    "PostgreSQL",
+    "MongoDB",
+    "MySQL",
+    "Docker",
+    "Git",
+    "Scrum",
   ]
 };
 const programmingLanguages = {
@@ -59,11 +59,11 @@ const programmingLanguages = {
     color: "text-slate-600 dark:text-slate-400"
   },
   skills: [
-  "JavaScript",
-  "TypeScript",
-  "Python",
-  "Java",
-  "C#",
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "Java",
+    "C#",
   ]
 };
 const softSkill = {
